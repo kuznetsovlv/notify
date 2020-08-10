@@ -1,0 +1,4 @@
+export const ERROR_DETECTED = 'ERROR_DETECTED';
+export const FETCH_DATA = 'FETCH_DATA';
+export const MARK_DATA_AS_FETCHING = 'MARK_DATA_AS_FETCHING';
+export const RECEIVE_DATA = 'RECEIVE_DATA';

@@ -1,0 +1,89 @@
+$size: 10px;
+$triangle_size: 5px;
+$tringle_color: #aaa;
+
+.presenter {
+	display: inline-block;
+	width: calc(97% - #{$size});
+	padding: 5px 5px 10px;
+	border: 1px solid #ccc;
+	box-shadow: inset 2px 2px 1px 0 #ddd;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+
+	&__even {
+		background: #fff5ee; 
+	}
+
+	&__odd {
+		background: #fffaf0;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	p {
+		margin: 0 0 3px;
+		padding: 0;
+	}
+
+	.data {
+		display: inline-block;
+		width: calc(100% - #{$size});
+		vertical-align: top;
+		padding: 0;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			vertical-align: top;
+			width: $size;
+			height: $size;
+			border: none;
+			border-left: 1px solid #555;
+			border-bottom: 1px solid #555;
+			margin: 0 6px;
+		}
+	}
+}
+
+.title-presenter {
+	margin: 0 0 3px;
+	padding: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	.title {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0;
+		cursor: pointer;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 0;
+			height: 0;
+			border: $triangle_size solid transparent;
+		}
+
+		&_open {
+			&:before {
+				border-top: $triangle_size solid $tringle_color;
+				margin: 5px 2px 0 0;
+			}
+		}
+
+		&_closed {
+			&:before {
+				border-left: $triangle_size solid $tringle_color;
+				margin: 0 0 0 3px;
+			}
+		}
+	}
+}
